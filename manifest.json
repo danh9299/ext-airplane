@@ -1,23 +1,17 @@
 {
-    "manifest_version": 3,
-    "name": "Popup Button Extension",
-    "description": "Extension to show an alert",
+    "manifest_version": 2,
+    "name": "Flying Plane",
+    "description": "Máy bay bay quanh trang web",
     "version": "1.0",
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/16.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
-      }
-    },
     "permissions": [
       "activeTab"
     ],
-    "icons": {
-      "16": "icons/16.png",
-      "48": "icons/48.png",
-      "128": "icons/128.png"
-    }
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
+    ]
   }
   
